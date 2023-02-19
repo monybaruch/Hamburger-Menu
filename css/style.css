@@ -1,0 +1,73 @@
+:root {
+  --primary-color: rgba(13, 110, 139, 0.55);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-height: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#showcase {
+  background: var(--primary-color);
+  color: whitesmoke;
+  height: 100vh;
+  position: relative;
+}
+
+#showcase::before {
+  content: "";
+  position: absolute;
+  background: url(../img/japan-g6ac4f1c19_1920.jpg) no-repeat center
+    center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+#showcase h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+#showcase p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  font-size: 1rem;
+  text-decoration: none;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 1.5rem;
+  transition: opacity 1s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
